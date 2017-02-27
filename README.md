@@ -4,7 +4,8 @@ A simple TCP chat app with python
 runing the server :
     
     $ python server.py 
-    //  then start the server
+    //  then click start the server
+![Screenshot](http://imgur.com/a/yOJ7t)
 use the client after starting the server :
     
     $ python client.py 
