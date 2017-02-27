@@ -5,6 +5,7 @@ runing the server :
     
     $ python server.py 
 ![Screenshot](http://i.imgur.com/GLgP6Eu.png)
+
 use the client after starting the server :
     
     $ python client.py 
