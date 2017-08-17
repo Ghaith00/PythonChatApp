@@ -1,0 +1,42 @@
+#!/usr/bin/python
+# (C) coded by Tabib Ghaith
+
+
+from lib.server import Server
+import sys
+
+#------------------------ Help Funtion ------------------------#
+def help():
+	return """
+	 _   _ _____ _     ____
+	| | | | ____| |   |  _ \*
+	| |_| |  _| | |   | |_) |
+	|  _  | |___| |___|  __/
+	|_| |_|_____|_____|_|
+	"""
+
+
+#------------------------ Main Function -----------------------#
+def Main():
+	if len(sys.argv) < 2:
+		print "python server: invalid arguments"
+		print "Try 'python server --help' for more information"
+		return 2
+	elif sys.argv[1] == '--help':
+		print help()
+		return 0
+	else :
+		try:
+			user_list = []
+			# creating server object
+			server = Server(int(sys.argv[1]), user_list)
+			# starting server
+			server.start()
+			# stop listening and close connections1
+			server.stop()
+		except Exception as e:
+			print '[!] ' + str(e)
+
+
+if __name__ == '__main__':
+	Main()
